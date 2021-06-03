@@ -4,7 +4,10 @@ Rails.application.routes.draw do
 
   root to:"home#index"
 
-  get 'articles/new', to: 'articles#new'
+
+  get 'articles', to: 'articles#index'
+
+  get 'articles/new', to: 'articles#new', as: :new_articles
   
   get 'articles/:id', to: 'articles#show'
   
